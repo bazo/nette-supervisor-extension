@@ -1,0 +1,22 @@
+{
+	"name": "bazo/nette-supervisor-extension",
+	"type": "library",
+	"description": "Nette Supervisor extension",
+	"keywords": ["supervisor", "nette"],
+	"homepage": "https://github.com/bazo/nette-supervisor-extension",
+	"authors": [
+		{
+			"name": "Martin Bažík",
+			"email": "martin@bazo.sk",
+			"homepage": "http://bazo.sk"
+		}
+	],
+	"require": {
+		"php": ">=5.4.0",
+		"indigophp/supervisor": "@dev",
+		"nette/nette": "@dev"
+	},
+	"autoload": {
+		"psr-0": {"Bazo": "src/"}
+	}
+}
