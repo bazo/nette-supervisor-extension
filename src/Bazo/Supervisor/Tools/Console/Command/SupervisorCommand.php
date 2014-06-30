@@ -27,8 +27,6 @@ class SupervisorCommand extends Console\Command\Command
 	const ACTION_RESTART = 'restart';
 	const ACTION_REMOVE = 'remove';
 
-
-
 	/** @var Supervisor */
 	private $supervisor;
 	private $validObjects = [
@@ -37,19 +35,19 @@ class SupervisorCommand extends Console\Command\Command
 		self::OBJECT_ALL_PROCESSES
 	];
 	private $validActions = [
-		self::OBJECT_GROUP => [
+		self::OBJECT_GROUP			 => [
 			self::ACTION_STOP,
 			self::ACTION_START,
 			self::ACTION_RESTART,
 			self::ACTION_REMOVE
 		],
-		self::OBJECT_PROCESS => [
+		self::OBJECT_PROCESS		 => [
 			self::ACTION_INFO,
 			self::ACTION_STOP,
 			self::ACTION_START,
 			self::ACTION_RESTART
 		],
-		self::OBJECT_ALL_PROCESSES => [
+		self::OBJECT_ALL_PROCESSES	 => [
 			self::ACTION_INFO,
 			self::ACTION_START,
 			self::ACTION_STOP,
@@ -57,8 +55,6 @@ class SupervisorCommand extends Console\Command\Command
 		]
 	];
 	private $infoHeaders = ['pid', 'name', 'group', 'statename', 'start', 'stop', 'state'];
-
-
 
 	function __construct(Supervisor $supervisor)
 	{
@@ -73,7 +69,7 @@ class SupervisorCommand extends Console\Command\Command
 				->addArgument('object', InputArgument::REQUIRED, 'can be group, process, allProcesses')
 				->addArgument('action', InputArgument::REQUIRED, 'stop, start, remove')
 				->addArgument('name', InputArgument::OPTIONAL, 'name of process or group')
-				->setDescription('Simulate weather');
+				->setDescription('Control supervisord');
 	}
 
 

@@ -2,6 +2,8 @@
 
 namespace Bazo\Supervisor\DI;
 
+
+
 /**
  * @author Martin Bažík <martin@bazo.sk>
  */
@@ -10,13 +12,11 @@ class SupervisorExtension extends \Nette\DI\CompilerExtension
 
 	/** @var array */
 	public $defaults = [
-		'host' => '127.0.0.1',
-		'port' => 9001,
-		'username' => NULL,
-		'password' => NULL
+		'host'		 => '127.0.0.1',
+		'port'		 => 9001,
+		'username'	 => NULL,
+		'password'	 => NULL
 	];
-
-
 
 	/**
 	 * Processes configuration data
